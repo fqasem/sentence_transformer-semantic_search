@@ -31,8 +31,8 @@ The advantage of Cross-Encoders is the higher performance, as they perform atten
 
 ## Example Scripts
 
-* **[retrieve_rerank_simple_wikipedia.ipynb](retrieve_rerank_simple_wikipedia.ipynb)** [ [Colab Version](https://colab.research.google.com/github/UKPLab/sentence-transformers/blob/master/examples/sentence_transformer/applications/retrieve_rerank/retrieve_rerank_simple_wikipedia.ipynb) ]: This script uses the smaller [Simple English Wikipedia](https://simple.wikipedia.org/wiki/Main_Page) as document collection to provide answers to user questions / search queries. First, we split all Wikipedia articles into paragraphs and encode them with a bi-encoder. If a new query / question is entered, it is encoded by the same bi-encoder and the paragraphs with the highest cosine-similarity are retrieved (see [semantic search](../semantic-search/README.md)). Next, the retrieved candidates are scored by a Cross-Encoder re-ranker and the 5 passages with the highest score from the Cross-Encoder are presented to the user.
-- **[in_document_search_crossencoder.py](in_document_search_crossencoder.py):** If you only have a small set of paragraphs, we don't do the retrieval stage. This is for example the case if you want to perform search within a single document. In this example, we take the Wikipedia article about Europe and split it into paragraphs. Then, the search query / question and all paragraphs are scored using the Cross-Encoder re-ranker. The most relevant passages for the query are returned.
+* **retrieve_rerank_simple_wikipedia.ipynb** [ [Colab Version](https://colab.research.google.com/github/UKPLab/sentence-transformers/blob/master/examples/sentence_transformer/applications/retrieve_rerank/retrieve_rerank_simple_wikipedia.ipynb) ]: This script uses the smaller [Simple English Wikipedia](https://simple.wikipedia.org/wiki/Main_Page) as document collection to provide answers to user questions / search queries. First, we split all Wikipedia articles into paragraphs and encode them with a bi-encoder. If a new query / question is entered, it is encoded by the same bi-encoder and the paragraphs with the highest cosine-similarity are retrieved (see [semantic search](../semantic-search/README.md)). Next, the retrieved candidates are scored by a Cross-Encoder re-ranker and the 5 passages with the highest score from the Cross-Encoder are presented to the user.
+- **in_document_search_crossencoder.py:** If you only have a small set of paragraphs, we don't do the retrieval stage. This is for example the case if you want to perform search within a single document. In this example, we take the Wikipedia article about Europe and split it into paragraphs. Then, the search query / question and all paragraphs are scored using the Cross-Encoder re-ranker. The most relevant passages for the query are returned.
 
 
 ## Pre-trained Bi-Encoders (Retrieval)
@@ -56,9 +56,4 @@ query_embedding = model.encode(query)
 
 For more details how to compare the embeddings, see [semantic search](../semantic-search/README.md).
 
-We provide pre-trained models based on:
-- **MS MARCO:** 500k real user queries from Bing search engine. See [MS MARCO models](../../../../docs/pretrained-models/msmarco-v3.md) 
 
-## Pre-trained Cross-Encoders (Re-Ranker)
-
-For pre-trained Cross Encoder models, see: [MS MARCO Cross-Encoders](../../../../docs/cross_encoder/pretrained_models.md#ms-marco)

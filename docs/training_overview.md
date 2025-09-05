@@ -11,7 +11,7 @@ Then the following use cases, we may have different notions of similarity:
 - a model for **semantic search** would **not need a notion for similarity** between two documents, as it should only compare queries and documents.
 
 
-Also see [**Training Examples**](training/examples) for numerous training scripts for common real-world applications that you can adopt.
+Also see [**Training Examples**](../training) for numerous training scripts for common real-world applications that you can adopt.
 
 
 ## Training Components
