@@ -2,11 +2,9 @@
 
 This folder contains scripts that demonstrate how to train SentenceTransformers for **Information Retrieval**. As a simple example, we will use the [Quora Duplicate Questions dataset](https://huggingface.co/datasets/sentence-transformers/quora-duplicates). It contains over 500,000 sentences with over 400,000 pairwise annotations whether two questions are a duplicate or not.
 
-Models trained on this dataset can be used for mining duplicate questions, i.e., given a large set of sentences (in this case questions), identify all pairs that are duplicates. See [Paraphrase Mining](../../applications/paraphrase-mining/README.md) for an example how to use sentence transformers to mine for duplicate questions / paraphrases. This approach can be scaled to hundred thousands of sentences.
+Models trained on this dataset can be used for mining duplicate questions, i.e., given a large set of sentences (in this case questions), identify all pairs that are duplicates. This approach can be scaled to hundred thousands of sentences.
 
-```{eval-rst}
-You can also train and use :class:`~sentence_transformers.cross_encoder.CrossEncoder` models for this task. See `Cross Encoder > Training Examples > Quora Duplicate Questions <../../../cross_encoder/training/quora_duplicate_questions/README.html>`_ for more details.
-```
+
 
 ## Training
 
@@ -15,7 +13,6 @@ Choosing the right loss function is crucial for finetuning useful models. For th
 ```
 
 ### Contrastive Loss
-For the complete training example, see [training_OnlineContrastiveLoss.py](training_OnlineContrastiveLoss.py).
 
 ```{eval-rst}
 The Quora Duplicates dataset has a `pair-class subset <https://huggingface.co/datasets/sentence-transformers/quora-duplicates/viewer/pair-class>`_ which consists of question pairs and labels: 1 for duplicate and 0 for different.
@@ -40,7 +37,7 @@ train_loss = losses.OnlineContrastiveLoss(model=model, margin=0.5)
 ```
 
 ## MultipleNegativesRankingLoss
-For the complete example, see [training_MultipleNegativesRankingLoss.py](training_MultipleNegativesRankingLoss.py).
+
 
 ```{eval-rst}
 :class:`~sentence_transformers.losses.MultipleNegativesRankingLoss` is especially suitable for Information Retrieval / Semantic Search. A nice advantage is that it only requires positive pairs, i.e., we only need examples of duplicate questions. See `NLI > MultipleNegativesRankingLoss <../nli/README.html#multiplenegativesrankingloss>`_ for more information on how the loss works.
@@ -89,7 +86,7 @@ train_dataset = concatenate_datasets([
 :class:`~sentence_transformers.losses.MultipleNegativesRankingLoss` on the other sides mainly reduces the distance between positive pairs out of large set of possible candidates. However, the distance between  non-duplicate questions is not so large, so that this loss does not work that well for pair classification.
 ```
 
-In [training_multi-task-learning.py](training_multi-task-learning.py) I demonstrate how we can train the network with both losses. The essential code is to define both losses and to pass it to the fit method.
+In training_multi-task-learning.py I demonstrate how we can train the network with both losses. The essential code is to define both losses and to pass it to the fit method.
 
 ```python
 from datasets import load_dataset
