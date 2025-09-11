@@ -10,7 +10,7 @@ It was trained on the Natural Questions dataset, a dataset with real questions f
 together with annotated data from Wikipedia providing the answer. For the passages, we encode the
 Wikipedia article tile together with the individual text passages.
 
-Google Colab Example: https://colab.research.google.com/drive/11GunvCqJuebfeTlgbJWkIMT0xJH6PWF1?usp=sharing
+Google Colab Example: https://colab.research.google.com/drive/108SCGlW1JANsbOV8ZIRdEnv9RwtZFSR8?usp=sharing
 """
 
 import gzip
