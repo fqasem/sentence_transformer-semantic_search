@@ -1,7 +1,7 @@
 # Pretrained Models
 
 ```{eval-rst}
-We provide various pre-trained Sentence Transformers models via our Sentence Transformers Hugging Face organization. Additionally, over 6,000 community Sentence Transformers models have been publicly released on the Hugging Face Hub. All models can be found here:
+Hugging Face organization provides various pre-trained Sentence Transformers models. Additionally, over 6,000 community Sentence Transformers models have been publicly released on the Hugging Face Hub. All models can be found here:
 
 * **Original models**: `Sentence Transformers Hugging Face organization <https://huggingface.co/models?library=sentence-transformers&author=sentence-transformers>`_.
 * **Community models**: `All Sentence Transformer models on Hugging Face <https://huggingface.co/models?library=sentence-transformers>`_.
@@ -26,17 +26,6 @@ embeddings = model.encode([
 similarities = model.similarity(embeddings, embeddings)
 ```
 
-```{eval-rst}
-.. note::
-    Consider using the `Massive Textual Embedding Benchmark leaderboard <https://huggingface.co/spaces/mteb/leaderboard>`_ as an inspiration of strong Sentence Transformer models. Be wary:
-
-    - **Model sizes**: it is recommended to filter away the large models that might not be feasible without excessive hardware.
-    - **Experimentation is key**: models that perform well on the leaderboard do not necessarily do well on your tasks, it is **crucial** to experiment with various promising models.
-
-.. tip::
-
-    Read `Sentence Transformer > Usage > Speeding up Inference <./usage/efficiency.html>`_ for tips on how to speed up inference of models by up to 2x-3x.
-```
 
 ## Original Models
 
@@ -51,7 +40,7 @@ The **all-*** models were trained on all available training data (more than 1 bi
 
 ## Semantic Search Models
 
-The following models have been specifically trained for **Semantic Search**: Given a question / search query, these models are able to find relevant text passages. For more details, see [Usage > Semantic Search](../applications/semantic-search/README.md).
+The following models have been specifically trained for **Semantic Search**: Given a question / search query, these models are able to find relevant text passages. 
 
 ```{eval-rst}
 .. sidebar:: Documentation

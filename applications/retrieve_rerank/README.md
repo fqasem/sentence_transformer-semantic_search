@@ -54,6 +54,5 @@ query = "What is Python?"
 query_embedding = model.encode(query)
 ```
 
-For more details how to compare the embeddings, see [semantic search](../semantic-search/README.md).
 
 
