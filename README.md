@@ -1,50 +1,3 @@
-# Training Sentence Transformer Models
-This project contains various examples to fine-tune `SentenceTransformers` for specific tasks.
-
-For the documentation how to train your own models, see [Training Overview](http://www.sbert.net/docs/sentence_transformer/training_overview.html).
-
-## Training Examples
-- multilingual- Existent monolingual models can be extend to various languages ([paper](https://arxiv.org/abs/2004.09813)). This folder contains a step-by-step guide to extend existent models to new languages. 
-- quora_duplicate_questions- Quora Duplicate Questions is large set corpus with duplicate questions from the Quora community. The folder contains examples how to train models for duplicate questions mining and for semantic search.
-
-# Background:
-## Sentence Transformers: Embeddings, Retrieval, and Reranking
-
-This framework provides an easy method to compute embeddings for accessing, using, and training state-of-the-art embedding and reranker models. It can be used to compute embeddings using Sentence Transformer models ([quickstart](https://sbert.net/docs/quickstart.html#sentence-transformer)), to calculate similarity scores using Cross-Encoder (a.k.a. reranker) models ([quickstart](https://sbert.net/docs/quickstart.html#cross-encoder)) or to generate sparse embeddings using Sparse Encoder models ([quickstart](https://sbert.net/docs/quickstart.html#sparse-encoder)). This unlocks a wide range of applications, including [semantic search](https://sbert.net/examples/applications/semantic-search/README.html), [semantic textual similarity](https://sbert.net/docs/sentence_transformer/usage/semantic_textual_similarity.html), and [paraphrase mining](https://sbert.net/examples/applications/paraphrase-mining/README.html).
-
-A wide selection of over [15,000 pre-trained Sentence Transformers models](https://huggingface.co/models?library=sentence-transformers) are available for immediate use on 🤗 Hugging Face, including many of the state-of-the-art models from the [Massive Text Embeddings Benchmark (MTEB) leaderboard](https://huggingface.co/spaces/mteb/leaderboard). Additionally, it is easy to train or finetune your own [embedding models](https://sbert.net/docs/sentence_transformer/training_overview.html), [reranker models](https://sbert.net/docs/cross_encoder/training_overview.html) or [sparse encoder models](https://sbert.net/docs/sparse_encoder/training_overview.html) using Sentence Transformers, enabling you to create custom models for your specific use cases.
-
-For the **full documentation**, see **[www.SBERT.net](https://www.sbert.net)**.
-
-## Installation
-
-We recommend **Python 3.9+**, **[PyTorch 1.11.0+](https://pytorch.org/get-started/locally/)**, and **[transformers v4.34.0+](https://github.com/huggingface/transformers)**.
-
-**Install with pip**
-
-```
-pip install -U sentence-transformers
-```
-
-**Install with conda**
-
-```
-conda install -c conda-forge sentence-transformers
-```
-
-**Install from sources**
-
-Alternatively, you can also clone the latest version from the [repository](https://github.com/UKPLab/sentence-transformers) and install it directly from the source code:
-
-````
-pip install -e .
-```` 
-
-**PyTorch with CUDA**
-
-If you want to use a GPU / CUDA, you must install PyTorch with the matching CUDA Version. Follow
-[PyTorch - Get Started](https://pytorch.org/get-started/locally/) for further details how to install PyTorch.
-
 # Training Overview
 
 ## Why Finetune?
@@ -91,6 +44,55 @@ Training Sentence Transformer models involves between 4 to 6 components:
     </a>
 </div>
 <p></p>
+
+# Training Sentence Transformer Models
+This project contains various examples to fine-tune `SentenceTransformers` for specific tasks.
+
+For the documentation how to train your own models, see [Training Overview](http://www.sbert.net/docs/sentence_transformer/training_overview.html).
+
+## Training Examples
+- multilingual- Existent monolingual models can be extend to various languages ([paper](https://arxiv.org/abs/2004.09813)). This folder contains a step-by-step guide to extend existent models to new languages. 
+- quora_duplicate_questions- Quora Duplicate Questions is large set corpus with duplicate questions from the Quora community. The folder contains examples how to train models for duplicate questions mining and for semantic search.
+
+
+
+# Background:
+## Sentence Transformers: Embeddings, Retrieval, and Reranking
+
+This framework provides an easy method to compute embeddings for accessing, using, and training state-of-the-art embedding and reranker models. It can be used to compute embeddings using Sentence Transformer models ([quickstart](https://sbert.net/docs/quickstart.html#sentence-transformer)), to calculate similarity scores using Cross-Encoder (a.k.a. reranker) models ([quickstart](https://sbert.net/docs/quickstart.html#cross-encoder)) or to generate sparse embeddings using Sparse Encoder models ([quickstart](https://sbert.net/docs/quickstart.html#sparse-encoder)). This unlocks a wide range of applications, including [semantic search](https://sbert.net/examples/applications/semantic-search/README.html), [semantic textual similarity](https://sbert.net/docs/sentence_transformer/usage/semantic_textual_similarity.html), and [paraphrase mining](https://sbert.net/examples/applications/paraphrase-mining/README.html).
+
+A wide selection of over [15,000 pre-trained Sentence Transformers models](https://huggingface.co/models?library=sentence-transformers) are available for immediate use on 🤗 Hugging Face, including many of the state-of-the-art models from the [Massive Text Embeddings Benchmark (MTEB) leaderboard](https://huggingface.co/spaces/mteb/leaderboard). Additionally, it is easy to train or finetune your own [embedding models](https://sbert.net/docs/sentence_transformer/training_overview.html), [reranker models](https://sbert.net/docs/cross_encoder/training_overview.html) or [sparse encoder models](https://sbert.net/docs/sparse_encoder/training_overview.html) using Sentence Transformers, enabling you to create custom models for your specific use cases.
+
+For the **full documentation**, see **[www.SBERT.net](https://www.sbert.net)**.
+
+## Installation
+
+We recommend **Python 3.9+**, **[PyTorch 1.11.0+](https://pytorch.org/get-started/locally/)**, and **[transformers v4.34.0+](https://github.com/huggingface/transformers)**.
+
+**Install with pip**
+
+```
+pip install -U sentence-transformers
+```
+
+**Install with conda**
+
+```
+conda install -c conda-forge sentence-transformers
+```
+
+**Install from sources**
+
+Alternatively, you can also clone the latest version from the [repository](https://github.com/UKPLab/sentence-transformers) and install it directly from the source code:
+
+````
+pip install -e .
+```` 
+
+**PyTorch with CUDA**
+
+If you want to use a GPU / CUDA, you must install PyTorch with the matching CUDA Version. Follow
+[PyTorch - Get Started](https://pytorch.org/get-started/locally/) for further details how to install PyTorch.
 
 ## Model
 ```{eval-rst}
